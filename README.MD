@@ -1,6 +1,3 @@
-
-
-
 # Simple Web Express JWT
 
 This is a simple web application that demonstrates how to use JSON Web Tokens (JWTs) for authentication in an Express.js application.
@@ -9,13 +6,7 @@ This is a simple web application that demonstrates how to use JSON Web Tokens (J
 
 To install the application, clone the repository and navigate to the project directory:
 
-
-
-
 Then, install the dependencies:
-
-
-
 
 ## Configuration
 
@@ -26,16 +17,9 @@ The application requires a `.env` file with the following variables:
 
 Create a `.env` file in the root directory of the project and add the required variables:
 
-
-
-
 ## Usage
 
 To start the server, run:
-
-
-
-
 
 This will start the server at `http://localhost:3000`.
 
@@ -47,3 +31,7 @@ Register a new user.
 
 Example request:
 
+
+# The task
+
+In this lesson, we learnt JSON Web Token. This task requires you to change this application so that it uses the SQL database to store users. After signing up, users need to be added to the database (Instead of just to an array as is currently the case). The /users endpoint should return the list of all current users (their emails).

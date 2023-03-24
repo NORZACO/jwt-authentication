@@ -59,20 +59,13 @@ router.post("/login", async (req, res, next) => {
 // Handling post request
 router.post("/signup", async (req, res, next) => {
   const { email, password } = req.body;
-  const newUser = {
-    id,
-    email,
-    password,
-  };
+  const newUser = { id, email, password,};
+
   users.push(newUser);
   id++;
   let token;
   try {
-    token = jwt.sign(
-      { userId: newUser.id, email: newUser.email },
-      process.env.TOKEN_SECRET,
-      { expiresIn: "1h" }
-    );
+    token = jwt.sign({ userId: newUser.id, email: newUser.email },process.env.TOKEN_SECRET, { expiresIn: "1h" });
   } catch (err) {
     console.log(err);
     const error = new Error("Error! Something went wrong.");
